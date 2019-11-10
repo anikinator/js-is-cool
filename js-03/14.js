@@ -2,4 +2,6 @@
 
 let someDate = "2025-12-31"
 
-console.log(someDate.replace(/-/g,"/"))
+someDate = someDate.split("-").reverse()
+
+console.log(someDate.join("/"))
