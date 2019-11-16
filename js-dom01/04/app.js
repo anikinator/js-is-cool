@@ -5,18 +5,18 @@
 */
 
 // TODO:
-let yourId = "#sometag1"
+let yourId = "#sometag2"
 
 function getInnerTextOfElement(idOrClass){
     if (idOrClass[0] == "#"){
-        return document.getElementById(idOrClass).innerText
+        return document.getElementById(idOrClass.slice(1)).innerText
     }
     else if (idOrClass[0] == "."){
-        return document.getElementsByClassName(idOrClass).innerText
+        return document.getElementsByClassName(idOrClass.slice(1)).innerText
     }
     else {
         alert("Sorry, no class, no id")
     }
 }
 
-getInnerTextOfElement(yourId)
+console.log(getInnerTextOfElement(yourId))
